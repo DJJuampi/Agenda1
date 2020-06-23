@@ -56,17 +56,17 @@ function cerrarguardar() {
 function actualizar() {
   ContactosLista[contador].nombre = document.getElementById(
     `Nom${contador}`
-  ).innerHTML;
+  ).value;
   ContactosLista[contador].telefono = document.getElementById(
     `Tele${contador}`
-  ).innerHTML;
+  ).value;
   ContactosLista[contador].gmail = document.getElementById(
     `GMail${contador}`
-  ).innerHTML;
+  ).value;
 
-  document.getElementById("Nombre").innerHTML = ContactosLista[contador].nombre;
-  document.getElementById("Tel").innerHTML = ContactosLista[contador].telefono;
-  document.getElementById("Gmail").innerHTML = ContactosLista[contador].gmail;
+  document.getElementById(`Nom${contador}`).innerHTML = ContactosLista[contador].nombre;
+  document.getElementById(`Tele${contador}`).innerHTML = ContactosLista[contador].telefono;
+  document.getElementById(`GMail${contador}`).innerHTML = ContactosLista[contador].gmail;
 }
 
 function editar() {}
