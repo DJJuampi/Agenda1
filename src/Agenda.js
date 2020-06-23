@@ -1,4 +1,4 @@
-document.getElementById("Edits").style.display = "none";
+
 var contador = 0;
 var contacto1;
 let ContactosLista = [``];
@@ -13,12 +13,12 @@ function templ(contador) {
     <a id="Editar${contador}" href="#" class="btn btn-primary" onclick="abrireditar()">Editar</a>
     <div id="Edits${contador}">
         <form class="form-inline my-2 my-lg-0">
-            <p id="Nom${contador}" class="card-text">Nombre:</p>
-            <input class="form-control mr-sm-2" >
-            <p id="Tele${contador}" class="card-text">Telefono:</p>
-            <input class="form-control mr-sm-2">
-            <p id="GMail${contador}" class="card-text">Gmail:</p>
-            <input class="form-control mr-sm-2">
+            <p class="card-text">Nombre:</p>
+            <input class="form-control mr-sm-2" id="Nom${contador}">
+            <p class="card-text">Telefono:</p>
+            <input class="form-control mr-sm-2" id="Tele${contador}">
+            <p class="card-text">Gmail:</p>
+            <input class="form-control mr-sm-2" id="GMail${contador}">
             <a id="Editar${contador}" href="#" class="btn btn-primary" onclick="actualizar(); cerrarguardar()">Guardar</a>
         </form>
     </div>
@@ -40,16 +40,17 @@ function CrearNuevo() {
   ContactoNuevo = new contacto();
   ContactosLista.push(ContactoNuevo);
   document.getElementById("Cartas").innerHTML += templ(contador);
+  document.getElementById(`Edits${contador}`).style.display = "none";
 }
 
 function abrireditar() {
-  document.getElementById("Edits").style.display = "Block";
-  document.getElementById("Editar").style.display = "none";
+  document.getElementById(`Edits${contador}`).style.display = "Block";
+  document.getElementById(`Editar${contador}`).style.display = "none";
 }
 
 function cerrarguardar() {
-  document.getElementById("Edits").style.display = "none";
-  document.getElementById("Editar").style.display = "Block";
+  document.getElementById(`Edits${contador}`).style.display = "none";
+  document.getElementById(`Editar${contador}`).style.display = "Block";
 }
 
 function actualizar() {
