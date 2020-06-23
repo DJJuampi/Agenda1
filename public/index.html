@@ -14,7 +14,6 @@
 <body>
     <div id="Bar">
         <nav class="navbar navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Nuevo</a>
             <button onclick="CrearNuevo()"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +21,6 @@
 
         </nav>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -33,12 +31,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <div class="card-columns">
+    <div id="Cartas" class="card-columns">
 
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="fuksee.png" alt="Card image cap">
             <div class="card-body">
-                <h5 id="Nombre" class="card-title">Nombre del contacto</h5>
+                <h5 id="Nombre${contador}" class="card-title">Nombre del contacto</h5>
                 <p id="Tel" class="card-text">Telefono</p>
                 <p id="Gmail" class="card-text">Gmail</p>
                 <a id="Editar" href="#" class="btn btn-primary" onclick="abrireditar()">Editar</a>
@@ -59,7 +57,7 @@
 </body>
 
 </html>
-<script src="../lib/Agenda.js">
+<script src="../src/Agenda.js">
     /*<div class="card" style="width: 18rem;">
         <img class="card-img-top" src="fuksee.png" alt="Card image cap">
         <div class="card-body">
