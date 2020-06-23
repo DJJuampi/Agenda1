@@ -14,7 +14,7 @@ function templ(contador) {
     <div id="Edits${contador}">
         <form class="form-inline my-2 my-lg-0">
             <p id="Nom${contador}" class="card-text">Nombre:</p>
-            <input class="form-control mr-sm-2">
+            <input class="form-control mr-sm-2" >
             <p id="Tele${contador}" class="card-text">Telefono:</p>
             <input class="form-control mr-sm-2">
             <p id="GMail${contador}" class="card-text">Gmail:</p>
